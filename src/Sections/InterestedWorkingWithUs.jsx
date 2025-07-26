@@ -24,19 +24,19 @@ const InterestedWorkingWithUs = () => {
         },
     ]
     return (
-        // ১. সেকশনের প্যাডিং এবং মার্জিন রেসপন্সিভ করা হয়েছে
+        // section background and padding
         <div className='max-w-[1420px] mx-auto px-4 md:px-8 my-20 lg:my-[120px]'>
             <CenterHeadline title="Interested In Working With Us?"></CenterHeadline>
-            {/* ২. টেক্সট সাইজ রেসপন্সিভ করা হয়েছে */}
+            {/* text size responsive */}
             <p className='mt-4 font-semibold text-center text-lg md:text-xl lg:text-[24px]'>We work with real estate investors across the country every day. How can we help?</p>
             
-            {/* ৩. Grid লেআউট রেসপন্সিভ করা হয়েছে */}
+            {/* grid*/}
             <div className='grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-10'>
                 {
                     contactIdeas.map((idea) => (
-                        // ৪. কার্ডের ফিক্সড সাইজগুলো শুধু ডেস্কটপের জন্য রাখা হয়েছে
+                        // cards
                         <div key={idea.id} className='border-2 border-gray-200 rounded-lg lg:w-[447px] lg:h-[388px] flex flex-col items-center py-8 lg:py-0'>
-                            {/* ৫. হেলানো বক্সের স্টাইল রেসপন্সিভ করা হয়েছে */}
+                            {/* card */}
                             <div className='w-[138.5px] h-[103px] bg-[#EEFFF5] transform skew-x-[-15deg] lg:mt-[46.1px] flex justify-center items-center'>
                                 <div className='w-[91px] h-[64px] border-2 border-[#165831] bg-white flex justify-center items-center'>
                                     <span className='transform skew-x-[15deg]'>
@@ -46,7 +46,6 @@ const InterestedWorkingWithUs = () => {
                             </div>
                             <div className='flex flex-col items-center flex-grow mt-6 text-center'>
                                 <h2 className='text-xl lg:text-[24px] font-semibold text-[#165831]'>{idea.title}</h2>
-                                {/* ৬. সাবটাইটেলের ফিক্সড সাইজ সরানো হয়েছে */}
                                 <p className='mt-4 text-base lg:text-[18px] lg:w-[272px] lg:h-[53px]'>{idea.subtitle}</p>
                                 
                                 <div className='lg:mt-[25px] mt-auto'>

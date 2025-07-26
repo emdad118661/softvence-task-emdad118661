@@ -6,13 +6,13 @@ import { RiInstagramFill } from "react-icons/ri";
 
 const Footer = () => {
     return (
-        // ১. সেকশনের উচ্চতা এবং প্যাডিং রেসপন্সিভ করা হয়েছে
+        // section background and padding
         <div className='bg-[#165831] text-white w-full py-16 lg:h-[430px] lg:py-10'>
-            {/* ২. Grid লেআউট এবং গ্যাপ রেসপন্সিভ করা হয়েছে */}
+            {/*grid layout*/}
             <div className='max-w-[1420px] mx-auto px-6 md:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10'>
                 
-                {/* কলাম ১ */}
-                {/* ৩. কলামের ফিক্সড প্রস্থ শুধুমাত্র ডেস্কটপের জন্য রাখা হয়েছে */}
+                {/* column */}
+                
                 <div className='lg:w-[325px]'>
                     <HeadOfFooter title="Company" />
                     <ul className='mt-3 space-y-2 text-lg lg:text-[20px]'>
@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* কলাম ২ */}
+                {/* column 2 */}
                 <div className='lg:w-[325px]'>
                     <HeadOfFooter title="Top Cites We Lend In" />
                     <ul className='mt-3 space-y-2 text-lg lg:text-[20px]'>
@@ -46,7 +46,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                {/* কলাম ৩ */}
+                {/* column 3 */}
                 <div className='lg:w-[325px]'>
                     <HeadOfFooter title="Top Resources" />
                     <ul className='mt-3 space-y-2 text-lg lg:text-[20px]'>
@@ -65,7 +65,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* কলাম ৪ */}
+                {/* column 4 */}
                 <div className='lg:w-[325px]'>
                     <HeadOfFooter title="Contact Us" />
                     <ul className='mt-3 space-y-2 text-lg lg:text-[20px]'>

@@ -3,7 +3,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const SlantedButtonGreen = ({title}) => {
     return (
-        // স্তর ১: মূল <a> ট্যাগ, যা সাদা এবং ডানদিকে হেলানো
+        
         <a
             href="#"
             className={`
@@ -12,25 +12,24 @@ const SlantedButtonGreen = ({title}) => {
                 transform -skew-x-[15deg]
             `}
         >
-            {/* স্তর ২: সবুজ অংশ, যা একটি সাধারণ আয়তক্ষেত্র */}
+            {/* green rectangle */}
             <span
                 className="absolute z-10 h-[73px] -translate-y-1/2 bg-white rounded-md top-1/2 right-2 w-14"
             ></span>
 
-            {/* স্তর ৩: কন্টেন্ট (টেক্সট ও আইকন), যা সোজা থাকবে */}
-            {/* === শুধু এই লাইনেই পরিবর্তন করা হয়েছে === */}
+            {/* text and icon */}
             <div
                 className="
                     relative h-full w-full flex items-center
                     transform skew-x-[15deg] pl-6 pr-20 z-20
                 "
             >
-                {/* টেক্সট অংশ */}
+                {/* text */}
                 <span className="text-xl font-semibold text-white uppercase">
                     {title}
                 </span>
                 
-                {/* আইকন অংশ */}
+                {/* icon */}
                 <span className="absolute text-3xl text-[#165831] right-5">
                     <MdOutlineKeyboardDoubleArrowRight />
                 </span>

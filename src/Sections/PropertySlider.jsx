@@ -17,17 +17,17 @@ const properties = Array.from({ length: 12 }, (_, i) => ({
 
 const PropertyCard = ({ property }) => {
     return (
-        // কার্ডের প্রস্থ রেসপন্সিভ করা হয়েছে এবং ফিক্সড উচ্চতা সরিয়ে দেওয়া হয়েছে
+        
         <div className="flex-shrink-0 w-full p-2 snap-center sm:w-1/2 lg:w-1/3">
             <div className="rounded-xl overflow-hidden bg-white text-[#193D2C] h-full flex flex-col">
                 <div className='relative'>
-                    {/* ছবির উচ্চতা রেসপন্সিভ করা হয়েছে */}
+                    
                     <img src={property.image} alt={property.title} className="object-cover w-full h-52 md:h-64" />
                     <span className='absolute top-4 left-4 bg-[#2a6a43] text-white px-3 py-1 rounded-md text-sm font-semibold'>For Sale</span>
                 </div>
-                {/* কন্টেন্টের প্যাডিং রেসপন্সিভ করা হয়েছে */}
+                
                 <div className='flex-grow p-4 md:p-5'>
-                    {/* টাইপোগ্রাফি রেসপন্সিভ করা হয়েছে */}
+                    
                     <h3 className="text-xl font-semibold text-center truncate md:text-2xl">{property.title}</h3>
                     <p className="flex items-center justify-center gap-1 mt-2 mb-6 text-sm text-gray-600"><IoLocationSharp className='text-[#2a6a43]'/> {property.location}</p>
                     
@@ -78,7 +78,7 @@ const PropertySlider = () => {
         <div className="pt-8 md:pt-12">
             <div className="flex items-center w-full gap-1 mx-auto sm:gap-2 md:gap-4">
                 
-                {/* === বাম দিকের নেভিগেশন বাটন (এখানে পরিবর্তন করা হয়েছে) === */}
+                {/* === left arrow === */}
                 <button 
                     onClick={() => handleScroll('left')}
                     // মোবাইলের জন্য ছোট আকার এবং বড় স্ক্রিনের জন্য বড় আকার
@@ -96,10 +96,10 @@ const PropertySlider = () => {
                     ))}
                 </div>
 
-                {/* === ডান দিকের নেভিগেশন বাটন (এখানে পরিবর্তন করা হয়েছে) === */}
+                {/* === right arrow === */}
                 <button 
                     onClick={() => handleScroll('right')}
-                    // মোবাইলের জন্য ছোট আকার এবং বড় স্ক্রিনের জন্য বড় আকার
+                    // scroll arrow
                     className="p-1 text-2xl text-white transition-colors rounded-full sm:text-3xl lg:text-4xl lg:p-2 hover:text-gray-300"
                 >
                     <IoIosArrowForward />

@@ -1,12 +1,11 @@
-// src/sections/LoanProducts.jsx
+
 
 import React from 'react';
- // আগের বানানো হেডলাইন
- // নতুন কার্ড কম্পোনেন্ট
+
 import CenterHeadline from '../Components/CenterHeadline';
 import LoanCard from '../Components/LoanCard';
 
-// কার্ডগুলোর জন্য ডেটা। এখানে icon-এর জন্য placeholder link ব্যবহার করা হয়েছে।
+// card data
 const loanData = [
   {
     icon: 'https://i.ibb.co/qMsLfsQp/image-2.png', // Example Icon
@@ -18,7 +17,7 @@ const loanData = [
       'Origination Fee From 1.5%',
       'Up to 85% of Purchase and 100% of Rehab'
     ],
-    variant: 'dark' // প্রথম কার্ডটি ডার্ক
+    variant: 'dark' 
   },
   {
     icon: 'https://i.ibb.co/dsmvCvVW/image-2.png', // Example Icon
@@ -30,7 +29,7 @@ const loanData = [
       'Origination Fee From 1.5%',
       'Up to 85% of LTV'
     ],
-    variant: 'light' // দ্বিতীয় কার্ডটি লাইট
+    variant: 'light' 
   },
   {
     icon: 'https://i.ibb.co/gZBsVVNp/image-2-1.png', // Example Icon
@@ -42,7 +41,7 @@ const loanData = [
       'Origination Fee From 1.5%',
       'Up to 80% of LTC'
     ],
-    variant: 'light' // তৃতীয় কার্ডটি লাইট
+    variant: 'light' 
   }
 ];
 

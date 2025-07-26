@@ -7,12 +7,12 @@ import { IoInformationCircleOutline } from "react-icons/io5";
 import SlantedButtonGreen from './SlantedButtonGreen';
 import SlantedButton from './SlantedButton';
 
-// cardData prop-এ কার্ডের সব তথ্য আসবে
-// variant prop দিয়ে আমরা নির্ধারণ করব কার্ডটি ডার্ক (সবুজ) নাকি লাইট (সাদা) হবে
+// cardData prop for the LoanCard component
+// variant prop 
 const LoanCard = ({ cardData, variant }) => {
     const { icon, title, subtitle, features } = cardData;
 
-    // ভ্যারিয়েন্টের ওপর ভিত্তি করে কার্ডের স্টাইল পরিবর্তন হবে
+    // card style is chaging based on variant prop
     const isDark = variant === 'dark';
     const cardClasses = isDark ? 'bg-[#165831] text-white' : 'bg-white text-gray-800';
     const titleClasses = isDark ? 'text-white' : 'text-[#165831]';
@@ -20,19 +20,19 @@ const LoanCard = ({ cardData, variant }) => {
 
     return (
         // Main card container
-        // relative ও overflow-hidden দেওয়া হয়েছে যাতে কোণার ডিজাইনটি ঠিকমতো থাকে
+        // relative ও overflow-hidden 
         <div className={`relative rounded-3xl shadow-xl overflow-hidden flex flex-col p-8 ${cardClasses}`}>
 
-            {/* ছবির ডিজাইন অনুযায়ী কোণার সবুজ অংশ */}
+            {/* 1st green style */}
             <div className="absolute top-[-180px] left-[-10px] h-[200px] w-full bg-[#165831] transform rotate-[-5deg]"></div>
 
-            {/* Card Body - flex-grow দিয়ে নিশ্চিত করা হয়েছে যে এটি সম্পূর্ণ জায়গা নেবে */}
+            {/* Card Body - flex-grow */}
             <div className="relative z-10 flex flex-col flex-grow">
 
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
                     <div className={`w-24 h-24 rounded-2xl flex items-center justify-center ${isDark ? 'bg-white' : 'bg-[#165831]'}`}>
-                        {/* আপনি এখানে img ট্যাগ বা অন্য কোনো আইকন লাইব্রেরি ব্যবহার করতে পারেন */}
+                        {/* img tag for icon */}
                         <img src={icon} alt={`${title} icon`} className="w-14 h-14" />
                     </div>
                 </div>
@@ -59,7 +59,7 @@ const LoanCard = ({ cardData, variant }) => {
                     <a href="#" className="text-sm font-semibold underline">Learn More</a>
                 </div>
 
-                {/* Button - mt-auto দিয়ে এটিকে কার্ডের একদম নিচে পাঠানো হয়েছে */}
+                {/* Button - mt-auto  */}
                 {isDark ? <SlantedButton title="GET APPROVED ONLINE"></SlantedButton> : <SlantedButtonGreen title="GET APPROVED ONLINE"></SlantedButtonGreen>}
 
                 <div className="absolute bottom-[-222px] left-[50px] h-[200px] w-full bg-[#165831] transform rotate-[-7deg]"></div>

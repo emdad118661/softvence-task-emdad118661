@@ -4,7 +4,7 @@ import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 import SlantedButton from '../Components/SlantedButton';
 
 const reviewsData = [
-    // ... (আপনার ১২টি রিভিউ ডেটা এখানে থাকবে)
+    // reviews data
     { id: 1, name: "John D.", subtitle: "An amazing experience!", description: "The process was seamless and incredibly fast. The team was professional and supportive throughout. Highly recommended for any real estate investor.", image: "https://i.ibb.co/39Cnjp32/Ellipse-1.png" },
     { id: 2, name: "Sarah L.", subtitle: "Five stars service", description: "I got my term sheet within an hour, just as they promised. Their reliability is unmatched in the industry. Will definitely work with them again.", image: "https://i.ibb.co/LzvfZ8vz/Ellipse-1-1.png" },
     { id: 3, name: "Mike R.", subtitle: "Truly professional team", description: "From the initial application to closing, every step was handled with utmost professionalism. They understand the needs of investors perfectly.", image: "https://i.ibb.co/hJcCMH4T/Ellipse-1-2.png" },
@@ -35,24 +35,24 @@ const ReviewCard = ({ review, isDesktop }) => (
 );
 
 const Reviews = () => {
-    // ডেস্কটপ স্লাইডারের জন্য state
+    // state for desktop slider
     const [currentIndex, setCurrentIndex] = useState(0);
-    // মোবাইল স্লাইডারের জন্য ref
+    // ref for mobile slider
     const scrollRef = useRef(null);
 
-    // ডেস্কটপ স্লাইডার ফাংশন (৪টি কার্ড দেখানোর জন্য)
+    // desktop slider functions
     const handleDesktopPrev = () => {
         if (currentIndex > 0) setCurrentIndex(prev => prev - 1);
     };
     const handleDesktopNext = () => {
-        // === পরিবর্তন: maxIndex এখন ৪টি কার্ডের জন্য গণনা করা হয়েছে ===
+        
         const maxIndex = reviewsData.length - 4;
         if (currentIndex < maxIndex) {
             setCurrentIndex(prev => prev + 1);
         }
     };
 
-    // মোবাইল স্লাইডার ফাংশন
+    // mobile slider function
     const handleMobileScroll = (direction) => {
         const container = scrollRef.current;
         if (container) {
@@ -64,7 +64,7 @@ const Reviews = () => {
     return (
         <div className='w-full lg:mt-20'>
             <div className='hidden lg:block lg:h-[880px] overflow-hidden relative'>
-                {/* === ডেস্কটপ ভিউ === */}
+                {/* === desktop view === */}
                 <div className='h-[450px] w-full pt-16'>
                     <CenterHeadline title="Ridge Street Client Reviews" />
                 </div>
@@ -77,13 +77,13 @@ const Reviews = () => {
                         <button onClick={handleDesktopPrev} disabled={currentIndex === 0}>
                             <IoIosArrowBack className={`size-20 transition-colors ${currentIndex === 0 ? 'text-slate-500 cursor-not-allowed' : 'text-slate-200 hover:text-white'}`} />
                         </button>
-                        {/* === পরিবর্তন: কন্টেইনারের প্রস্থ ৪টি কার্ড অনুযায়ী করা হয়েছে === */}
+                        
                         <div className="overflow-hidden w-[1360px]"> {/* 4 cards (325*4) + 3 gaps (20*3) = 1360px */}
                             <div className="flex gap-5 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * (325 + 20)}px)` }}>
                                 {reviewsData.map((review) => (<ReviewCard key={review.id} review={review} isDesktop={true} />))}
                             </div>
                         </div>
-                        {/* === পরিবর্তন: বাটন disabled লজিক ৪টি কার্ডের জন্য করা হয়েছে === */}
+                        
                         <button onClick={handleDesktopNext} disabled={currentIndex >= reviewsData.length - 4}>
                             <IoIosArrowForward className={`size-20 transition-colors ${currentIndex >= reviewsData.length - 4 ? 'text-slate-500 cursor-not-allowed' : 'text-slate-200 hover:text-white'}`} />
                         </button>
@@ -91,7 +91,7 @@ const Reviews = () => {
                 </div>
             </div>
 
-            {/* === মোবাইল ও ট্যাবলেট ভিউ (আগের মতোই) === */}
+            {/* === mobile tablet view === */}
             <div className='w-full pt-16 lg:hidden'>
                 <CenterHeadline title="Ridge Street Client Reviews" />
                 <div className='bg-[#165831] mt-10 pt-28 pb-12 relative'>
