@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import CenterHeadline from '../Components/CenterHeadline';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import getApproved from "../assets/Button get-approved-online.png";
+import SlantedButton from '../Components/SlantedButton';
 
 const reviewsData = [
     // ... (আপনার ১২টি রিভিউ ডেটা এখানে থাকবে)
@@ -70,7 +70,7 @@ const Reviews = () => {
                 </div>
                 <div className='absolute bottom-0 left-0 w-full h-[430px] bg-[#165831] -z-10' />
                 <div className="absolute bottom-[76.5px] left-1/2 -translate-x-1/2">
-                    <img src={getApproved} alt="Get Approved Online" />
+                    <SlantedButton title="Get Approved Online" />
                 </div>
                 <div className='absolute bottom-[240px] w-full'>
                     <div className='flex items-center justify-center w-full'>
@@ -105,7 +105,7 @@ const Reviews = () => {
                         <button onClick={() => handleMobileScroll('right')}><IoIosArrowForward className="text-4xl text-slate-200" /></button>
                     </div>
                     <div className="flex justify-center mt-12">
-                        <img src={getApproved} alt="Get Approved Online" className="w-auto h-auto max-w-[280px]" />
+                        <SlantedButton title="Get Approved Online" />
                     </div>
                 </div>
             </div>

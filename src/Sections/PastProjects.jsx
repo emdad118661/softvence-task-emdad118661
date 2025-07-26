@@ -1,5 +1,5 @@
 import PropertySlider from "./PropertySlider";
-import itemForProject from "../assets/button-item-for-project.png";
+import SlantedButton from "../Components/SlantedButton";
 
 const PastProjects = () => {
     return (
@@ -15,7 +15,7 @@ const PastProjects = () => {
                 </div>
                 <div className="flex justify-center pt-12">
                     {/* ইমেজটিকেও রেসপন্সিভ করা হয়েছে */}
-                    <img src={itemForProject} alt="More Projects" className="w-auto h-auto max-w-xs md:max-w-sm" />
+                    <SlantedButton title="Get Terms For Your Project"></SlantedButton>
                 </div>
             </div>
         </div>

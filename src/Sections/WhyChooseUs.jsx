@@ -1,6 +1,6 @@
 import React from 'react';
 import CenterHeadline from '../Components/CenterHeadline';
-import moreAboutUs from '../assets/Button-more-about-us.png';
+import SlantedButtonGreen from '../Components/SlantedButtonGreen';
 
 const WhyChooseUs = () => {
     const options = [
@@ -44,7 +44,7 @@ const WhyChooseUs = () => {
                 ))}
             </div>
             <div className='flex justify-center mt-12'>
-                <img src={moreAboutUs} alt="More About Us" className='w-auto h-auto max-w-[200px] md:max-w-none' />
+                <SlantedButtonGreen title="MORE ABOUT US" />
             </div>
         </div>
     );

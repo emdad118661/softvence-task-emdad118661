@@ -4,8 +4,8 @@ import React from 'react';
 import { BsCheck2Circle } from "react-icons/bs";;
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
-import getApproved from "../assets/Button get-approved-online.png";
-import getApprovedGreen from "../assets/Button get-approved-online-green.png";
+import SlantedButtonGreen from './SlantedButtonGreen';
+import SlantedButton from './SlantedButton';
 
 // cardData prop-এ কার্ডের সব তথ্য আসবে
 // variant prop দিয়ে আমরা নির্ধারণ করব কার্ডটি ডার্ক (সবুজ) নাকি লাইট (সাদা) হবে
@@ -60,9 +60,9 @@ const LoanCard = ({ cardData, variant }) => {
                 </div>
 
                 {/* Button - mt-auto দিয়ে এটিকে কার্ডের একদম নিচে পাঠানো হয়েছে */}
-                {isDark ? <img src={getApproved} alt="" srcSet="" /> : <img src={getApprovedGreen} alt="" srcSet="" />}
+                {isDark ? <SlantedButton title="GET APPROVED ONLINE"></SlantedButton> : <SlantedButtonGreen title="GET APPROVED ONLINE"></SlantedButtonGreen>}
 
-                <div className="absolute bottom-[-210px] left-[50px] h-[200px] w-full bg-[#165831] transform rotate-[-7deg]"></div>
+                <div className="absolute bottom-[-222px] left-[50px] h-[200px] w-full bg-[#165831] transform rotate-[-7deg]"></div>
             </div>
         </div>
     );

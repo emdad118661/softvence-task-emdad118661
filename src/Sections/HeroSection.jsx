@@ -1,5 +1,5 @@
 import React from 'react';
-import getApproved from "../assets/Button-approved-crop.png";
+import SlantedButtonGreen from '../Components/SlantedButtonGreen';
 
 const HeroSection = () => {
     return (
@@ -19,7 +19,7 @@ const HeroSection = () => {
                     Fast Closing Fix and Flip and Rental Loans For Your Investment Properties.
                 </p>
                 <div className="mt-8">
-                <img src={getApproved} alt="" />
+                <SlantedButtonGreen title="GET APPROVED ONLINE"></SlantedButtonGreen>
                 </div>
             </div>
         </div>

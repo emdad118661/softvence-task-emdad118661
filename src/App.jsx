@@ -10,6 +10,8 @@ import ReadyToStart from './Sections/ReadyToStart'
 import Reviews from './Sections/Reviews'
 import WhereWeLend from './Sections/WhereWeLend'
 import WhyChooseUs from './Sections/WhyChooseUs'
+import SlantedButton from './Components/SlantedButton'
+import SlantedButtonGreen from './Components/SlantedButtonGreen'
 
 function App() {
 

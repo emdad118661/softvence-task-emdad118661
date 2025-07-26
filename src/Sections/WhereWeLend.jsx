@@ -1,6 +1,6 @@
 import React from 'react';
 import map from '../assets/Map.png';
-import viewLocations from "../assets/button-view-locations.png";
+import SlantedButton from '../Components/SlantedButton';
 
 const WhereWeLend = () => {
     const sub = "Hard Money Loans | DSCR Loans";
@@ -79,7 +79,7 @@ const WhereWeLend = () => {
 
                 {/* FIX: Button image ke responsive kora holo. */}
                 <div className='flex justify-center pt-16 lg:pt-20'>
-                    <img src={viewLocations} alt="View all locations" className='w-full max-w-md transition-opacity cursor-pointer hover:opacity-90' />
+                    <SlantedButton title="View All Locations"></SlantedButton>
                 </div>
             </div>
         </div>

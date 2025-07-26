@@ -1,5 +1,5 @@
 import React from 'react';
-import getApproved from '../assets/Button-pre-approve.png';
+import SlantedButtonGreen from '../Components/SlantedButtonGreen';
 
 const ReadyToStart = () => {
     return (
@@ -23,7 +23,7 @@ const ReadyToStart = () => {
                     You can get pre-approved online and a Term Sheet that Meet's your needs will be sent to you within the hour.
                 </p>
                 <div className="flex justify-center mt-6 sm:mt-8 md:justify-start">
-                    <img src={getApproved} alt="Get Pre-Approved Button" className="w-40 sm:w-48 md:w-auto" />
+                    <SlantedButtonGreen title="GET PRE-APPROVED ONLINE" />
                 </div>
             </div>
         </div>
