@@ -11,7 +11,7 @@ const HeroSection = () => {
             
             
             {/* স্তর ৪: টেক্সট এবং বাটন */}
-            <div className="relative z-10 flex flex-col justify-center h-[403px] lg:ms-24 top-[150px] w-[700px]">
+            <div className="relative z-10 flex flex-col justify-center h-[403px] ms-10 lg:ms-24 top-[150px] w-[700px]">
                 <h1 className="text-[30px] md:text-[60px] font-extrabold text-[#165831] uppercase">
                     Florida and Texas <br /> Hard Money Lenders
                 </h1>
